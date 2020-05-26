@@ -8,12 +8,13 @@ class Usecase:
         except Exception as ex:
             print("Exception: {0}, Arguments: {1!r}".format(type(ex).__name__, ex.args))
         
-        label, description, effect, solution = '', '' ,'', ''
+        label, description, effect, solution, prevention = '', '' ,'', '', ''
         try:
             label = model_result['label_name']
             description = model_result['description']
             effect = model_result['effect']
             solution = model_result['solution']
+            prevention = model_result['prevention']
         except Exception as ex:
             print("Exception: {0}, Arguments: {1!r}".format(type(ex).__name__, ex.args))
 
@@ -21,6 +22,7 @@ class Usecase:
             "label": label,
             "description": description,
             "effect": effect,
-            "solution": solution
+            "solution": solution,
+            "prevention": prevention
         }
         return result

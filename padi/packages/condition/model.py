@@ -7,7 +7,7 @@ class Model:
         result = {}     
         try:
             filter = {
-                "label_id": 1
+                "label_id": label_id
             }
             result = col.find_one(filter=filter)
         except Exception as ex:

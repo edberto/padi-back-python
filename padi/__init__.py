@@ -14,7 +14,7 @@ padi_db = mongo_client['padi']
 try:
     os.makedirs(app.instance_path)
 except Exception as ex:
-    print("Exception: {0}, Arguments: {1!r}".format(type(ex).__name__, ex.args))
+    pass
 
 from .routes import *
 
