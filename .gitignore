@@ -1,1 +1,4 @@
 instance/
+venv/
+padi/__pycache__/
+*.pyc
